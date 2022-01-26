@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+
+    height: 325px;
+    width: 200px;
+
+    grid-template-rows: repeat(5, [col-start] min-content [col-end]);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] min-content [col-end]);
+}
+
+.outputRow {
+    height: 75px;
+    align-content: flex-start;
+}
+
+.outputText {
+    font-size: xx-large;
+}
+
+.lastValueText {
+    font-size: medium;
+    opacity: .5;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+}
+
+button.clearButton {
+    width: 150px;
+}
