@@ -107,15 +107,17 @@ function compute() {
     // Sanity check
     if (!isNaN(x) && !isNaN(y)) {
         if (currentOperator === '/') {
-            computedValue = x/y;
+            computedValue = y/x;
         } else if (currentOperator === '*') {
-            computedValue = x*y;
+            computedValue = y*x;
         } else if (currentOperator === '-') {
-            computedValue = x-y;
+            computedValue = y-x;
         } else if (currentOperator === '+') {
-            computedValue = x+y;
+            computedValue = y+x;
         } 
     }
+
+    currentOperator = null;
 
     render();
 }
@@ -132,6 +134,7 @@ function reset() {
 
 // Update DOM
 function render() {
+    document.getElementById('operator').innerHTML = currentOperator;
     document.getElementById('lastvalue').innerHTML = lastValue;
     document.getElementById('output').innerHTML = computedValue;
 }

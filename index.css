@@ -12,18 +12,35 @@
     grid-template-columns: repeat(4, [col-start] min-content [col-end]);
 }
 
-.outputRow {
+.outputContainer {
+    display: grid;
     height: 75px;
-    align-content: flex-start;
+    width: 200px;
+
+    grid-template-rows: repeat(2, [col-start] min-content [col-end]);
 }
 
 .outputText {
     font-size: xx-large;
 }
 
+.lastValueContainer {
+    display: grid;
+    height: 75px;
+
+    grid-template-columns: repeat(2, [col-start] min-content [col-end]);
+
+    align-self: end;
+}
+
 .lastValueText {
+    width: 180px;
     font-size: medium;
     opacity: .5;
+}
+
+.operatorText {
+    font-size: x-large;
 }
 
 button {
